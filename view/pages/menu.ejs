@@ -1,0 +1,70 @@
+<!-- views/pages/home.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<% include ../partials/head.ejs %>
+
+<body class="container">
+<% include ../partials/navbar.ejs %>
+
+<style>
+    h2 {text-align:center}
+    {font-size: 200%}
+    p {text-align: center}
+    {display: inline-block}
+    .button {padding-left: 46%}
+</style>
+
+<main>
+    <div class="jumbotron">
+        <h1>Popular Pizzas</h1>
+
+        <h2>Meat Feast Pizza</h2>
+        <p>Ingredients: <%= ingredients1 %></p>
+        <p>Price: €<%= price[0] %></p>
+        <p><img src="public/images/pizza1.png" alt="Meat Feast Pizza" height="250" width="380"></p>
+        <div class="button"><button onclick="">Add to Cart</button></div>
+
+        <h2>Hawaiian Pizza</h2>
+        <p>Ingredients: <%= ingredients2 %></p>
+        <p>Price: €<%= price[1] %></p>
+        <p><img src="public/images/pizza2.jpg" alt="Hawaiian Pizza" height="250" width="380"></p>
+        <div class="button"><button>Add to Cart</button></div>
+
+        <h2>Vegetarian Pizza</h2>
+        <p>Ingredients: <%= ingredients3 %></p>
+        <p>Price: €<%= price[2] %></p>
+        <p><img src="public/images/pizza3.jpg" alt="Vegetarian Pizza" height="250" width="380"></p>
+        <div class="button"><button>Add to Cart</button></div>
+
+        <h2>Buffalo Pizza</h2>
+        <p>Ingredients: <%= ingredients4 %></p>
+        <p>Price: €<%= price[3] %></p>
+        <p><img src="public/images/pizza4.jpg" alt="Buffalo Pizza" height="250" width="380"></p>
+        <div class="button"><button>Add to Cart</button></div>
+
+        <h1>Popular Sides</h1>
+
+        <h2>Chicken Tenders</h2>
+        <p>Price: €<%= price[4] %></p>
+        <p><img src="public/images/chickenTenders.jpg" alt="chicken tenders" height="250" width="380"></p>
+        <div class="button"><button>Add to Cart</button></div>
+
+        <h2>Garlic Bread</h2>
+        <p>Price: €<%= price[5] %></p>
+        <p><img src="public/images/garlicBread.jpg" alt="garlic bread" height="250" width="380"></p>
+        <div class="button"><button>Add to Cart</button></div>
+
+        <h1>Create Your Own!</h1>
+        <h2>Available Ingredients & Prices</h2>
+        <ul>
+        <% ingredientsAll.forEach(function(ingredient) { %>
+            <p><%= ingredient %></p>
+        <% }); %>
+            <div class="button"><button>Create Pizza</button></div>
+        </ul>
+    </div>
+</main>
+
+<% include ../partials/footer.ejs %>
+</body>

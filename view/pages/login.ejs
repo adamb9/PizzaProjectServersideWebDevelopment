@@ -1,0 +1,27 @@
+<!-- views/pages/home.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<% include ../partials/head.ejs %>
+
+<body class="container">
+<% include ../partials/navbar.ejs %>
+
+<style>
+
+</style>
+
+<main>
+    <div class="jumbotron">
+        <h1>Login</h1>
+
+        <form action="/login" method="POST">
+            Email: <input type="text" name="email"><br>
+            Password: <input type="text" name="passwd"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</main>
+
+<% include ../partials/footer.ejs %>
+</body>

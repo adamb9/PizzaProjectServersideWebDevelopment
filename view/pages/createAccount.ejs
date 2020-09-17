@@ -1,0 +1,34 @@
+<!-- views/pages/home.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<% include ../partials/head.ejs %>
+
+<body class="container">
+<% include ../partials/navbar.ejs %>
+
+<style>
+
+</style>
+
+<main>
+    <div class="jumbotron">
+        <h1>Create an Account</h1>
+
+        <form action="/createAccount" method="POST">
+            First name: <input type="text" name="fName"><br>
+            Last name: <input type="text" name="lName"><br>
+            Username: <input type="text" name="username"><br>
+            Password: <input type="text" name="passwd"><br>
+            Email: <input type="text" name="email"><br>
+            Phone No: <input type="text" name="phoneNo"><br>
+            Address(Street Name): <input type="text" name="street"><br>
+            House/Apartment No.: <input type="text" name="addressNo"><br>
+            City: <input type="text" name="city"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</main>
+
+<% include ../partials/footer.ejs %>
+</body>
